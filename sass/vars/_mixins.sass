@@ -1,0 +1,70 @@
+=clearfix
+	&::after
+		clear: both
+		content: ""
+		display: table
+	
+=placeholder()
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content	
+
+=position($top,$right,$bottom,$left)
+	position: absolute
+	left: $left
+	top: $top
+	right: $right
+	bottom: $bottom
+
+$phone: 400px
+
+
+$bigtablet: 810px
+
+$tablet: 749px
+$tablet1: 730px
+$tablet2: 530px
+
+$minitablet: 600px
+$minitablet2: 680px
+
+$sm: 1060px
+
+$md: 1155px
+$b: 1130px
+
+=phone
+	@media screen and (max-width: $phone)
+		@content
+=tablet
+	@media screen and (max-width: $tablet)
+		@content
+=tablet2
+	@media screen and (max-width: $tablet2)
+		@content
+=tablet1
+	@media screen and (max-width: $tablet1)
+		@content
+=bigtablet
+	@media screen and (max-width: $bigtablet)
+		@content
+=md
+	@media screen and (max-width: $md)
+		@content
+=b
+	@media screen and (max-width: $b)
+		@content
+=sm
+	@media screen and (max-width: $sm)
+		@content
+=minitablet
+	@media screen and (max-width: $minitablet)
+		@content
+=minitablet2
+	@media screen and (max-width: $minitablet2)
+		@content
